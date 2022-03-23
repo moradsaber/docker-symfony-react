@@ -4,6 +4,7 @@ namespace App\Controller\Api;
 
 use App\Entity\User;
 use App\Form\UpdateUserFormType;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -48,4 +49,14 @@ class UserController extends AbstractController
 
         return $this->json($user, Response::HTTP_OK, [], ['groups' => ['api']]);
     }
+
+    /**
+     * @Route("/users", name="list_users")
+     */
+    public  function getUsersAction(UserRepository $userRepository) {
+        $listEmailUsers = $userRepository->getListEmailUsers();
+
+        return $this->json($listEmailUsers, Response::HTTP_OK, [], ['groups' => ['api']]);
+    }
+
 }
