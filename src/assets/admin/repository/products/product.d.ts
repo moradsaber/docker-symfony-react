@@ -1,1 +1,1 @@
-export declare const getProducts: () => unknown;
+export declare const getProducts: () => Promise<unknown>;

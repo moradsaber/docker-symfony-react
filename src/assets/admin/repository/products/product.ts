@@ -1,14 +1,21 @@
 import Product from "../../models/product/Product";
 
-import productsList from  "../../assets/mocks/products.json";
+// import productsList from  "../../assets/mocks/products.json";
 
-export const getProducts = (): unknown => {
-    const data = productsList; // await fetch(apiProducts);
-    let productList : unknown[] = []
+const API_PRODUCT = '/api/products';
 
-    for ( const product of data ) {
-        productList = [ ... productList, product]
-    } 
+export const getProducts = async (): Promise<unknown> => {
+    try {
+        let response = await fetch(API_PRODUCT);
+        const data = await response.json();       
+        let productList : Product[] = []
 
-    return productList
+        for ( const product of data ) {
+            productList = [ ... productList, product]
+        } 
+        return productList
+        
+    } catch {
+        throw new Error(" un erreur 000 .... ")
+    }
 }

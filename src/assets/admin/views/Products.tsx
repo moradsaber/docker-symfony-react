@@ -1,7 +1,6 @@
-import React, {SetStateAction, useContext, useEffect, useState}  from 'react'
+import React, {EffectCallback, SetStateAction, useContext, useEffect, useState}  from 'react'
 import {
     CCol,
-    CContainer,
     CCardHeader,
     CCard,
     CCardBody,
@@ -15,9 +14,10 @@ import Product from "../models/product/Product";
 const Products: React.FunctionComponent<any> = () => {
     const [state, dispatch] = useContext(GlobalContext);
 
-    useEffect(() => {
-        console.log(' listProduct >> ', getProducts());
-        dispatch({type: 'PRODUCT_GET', payload : getProducts()})
+     useEffect (() => {
+         (async()=>{
+            dispatch({type: 'PRODUCT_GET', payload : await getProducts()})
+         })()
       }, [])
 
     
@@ -28,13 +28,13 @@ const Products: React.FunctionComponent<any> = () => {
                 <CCol xs="12" md="4" key={pdt.id}>
                     <CCard>
                     <CCardHeader>
-                       {pdt.titre}
+                       {pdt.title}
                     </CCardHeader>
                     <CCardBody>
                     {pdt.description}     
                     </CCardBody>
                     <CCardFooter>
-                   Prix :  {pdt.Price} €     
+                   Prix :  {pdt.price} €     
                     </CCardFooter>
                 </CCard>
         </CCol>)

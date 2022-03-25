@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "titre": "pc asus pro 16x",
+    "title": "pc asus pro 16x",
     "description": "Description du pc asus pro 16x ... lorem ipsum ............",
-    "Price": 1500.00,
+    "price": 1500.00,
     "images": [],
     "categorieId": 1
   },{
     "id": 2,
-    "titre": "clavier logitech",
+    "title": "clavier logitech",
     "description": "Description du clavier logitech .... lorem ipsum ...........",
-    "Price": 15.00,
+    "price": 15.00,
     "images": [],
     "categorieId": 1
   },
   {
     "id": 3,
-    "titre": "ecran dell Xtr 27 pouce",
+    "title": "ecran dell Xtr 27 pouce",
     "description": "Description du ecran dell Xtr 27 pouce .... lorem ipsum ...........",
-    "Price": 265.00,
+    "price": 265.00,
     "images": [],
     "categorieId": 1
   },
   {
     "id": 4,
-    "titre": "macgine a café nespresso krops noire",
+    "title": "macgine a café nespresso krops noire",
     "description": "Description du macgine a café nespresso krops noire .... lorem ipsum ...........",
-    "Price": 39.00,
+    "price": 39.00,
     "images": [],
     "categorieId": 2
   }
