@@ -47,6 +47,9 @@ const TheHeader = (): JSX.Element => {
                 <CHeaderNavItem className="px-3">
                     <CHeaderNavLink to="/profile">Profile</CHeaderNavLink>
                 </CHeaderNavItem>
+                <CHeaderNavItem className="px-3">
+                    <CHeaderNavLink to="/products">Produits</CHeaderNavLink>
+                </CHeaderNavItem>
             </CHeaderNav>
 
             <CHeaderNav className="px-3">

@@ -1,12 +1,13 @@
 import {Reducer} from "react";
 
 export type Action = {
-    type: 'SIDEBAR_HIDE' | 'SIDEBAR_SHOW',
+    type: 'SIDEBAR_HIDE' | 'SIDEBAR_SHOW' | 'PRODUCT_GET',
     payload: any
 }
 
 export type GlobalState = {
-    sidebarShow: boolean | 'responsive'
+    sidebarShow: boolean | 'responsive',
+    products : Array<any>
 }
 
 const GlobalReducer: Reducer<GlobalState, Action> = (state, action): GlobalState => {
@@ -20,6 +21,11 @@ const GlobalReducer: Reducer<GlobalState, Action> = (state, action): GlobalState
             return {
                 ...state,
                 sidebarShow: true,
+            };
+        case 'PRODUCT_GET':
+            return {
+                ...state,
+                products: action.payload, // todo action.payload
             };
         default:
             throw Error('Unknown action');
