@@ -30,4 +30,4 @@ services:
 
 volumes:
     mariadb:
-        name: ${DB_VOLUME_NAME:-"db-mariadb"}
+#        name: ${DB_VOLUME_NAME:-"db-mariadb"}

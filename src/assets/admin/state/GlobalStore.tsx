@@ -3,6 +3,7 @@ import GlobalReducer, {Action, GlobalState} from "./GlobalReducer";
 
 const initialState: GlobalState = {
     sidebarShow: 'responsive',
+    products : []
 };
 
 const GlobalStore: React.FunctionComponent = ({children}) => {
